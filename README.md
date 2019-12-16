@@ -39,7 +39,7 @@ public_key = ***
 3. 节点->标签大小（第四个小图标）->ranking->选择weight->根据图中情况自行调整最小尺寸和最大尺寸。
 4. 边也是同样的方式进行调整。我这里选择了默认。
 ### 5. 图
-![]( http://q1tldblw4.bkt.clouddn.com/qiniu_kwimggephi.jpg)
+![](http://q1tldblw4.bkt.clouddn.com/qiniu_kwimggephi.jpg)
 这里重点说一下下面四个框的作用，
 1. 在图中是否显示标签
 2. 边的宽度
@@ -47,7 +47,7 @@ public_key = ***
 4. 标签的相对大小。
 ### 6. 预览与保存
 ### 预览并保存
-![]( http://q1tldblw4.bkt.clouddn.com/qiniu_kwimg1576509213541.jpg)
+![](http://q1tldblw4.bkt.clouddn.com/qiniu_kwimg1576509213541.jpg)
 
 1. 可以通过上面的预览选项来进入预览界面，如果中间没有预览界面，可以依次点击**窗口**->**预览**来调试出来。
 2. 注意在预览设置中设置是否显示节点标签，显示边等选项。
@@ -56,11 +56,11 @@ public_key = ***
 5. 左下角有对应的输出，可以保存为svg/pdf/png,可以自行选择
 
 ## 结果展示
-![]( http://q1tldblw4.bkt.clouddn.com/qiniu_kwimgmarvel.png)
+![](http://q1tldblw4.bkt.clouddn.com/qiniu_kwimgmarvel.png)
 
 由于数据太多（99个），所以整个的效果图没有想象中的好看，因为是练手项目，所以就先暂时到此为止了。
 可以放上参考项目的效果图，他们只展示了25个角色的数据
-![]( http://q1tldblw4.bkt.clouddn.com/qiniu_kwimgidealmarvel.jpg)
+![](http://q1tldblw4.bkt.clouddn.com/qiniu_kwimgidealmarvel.jpg)
 ## 项目参考
 [漫威角色关系图](https://gitee.com/crossin/snippet/tree/master/marvel-gephi)
 故事数大于等于709的25个角色数据
