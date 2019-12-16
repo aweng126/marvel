@@ -110,11 +110,14 @@ def create_edges(edges_filepath,story_col):
 
     '''两层循环用来对于遍历任意两个英雄之间关联的权重：
        具体方式：每个英雄都有自己经历的故事，两个英雄彼此故事的重合的数量就表示两者的交集的多少，
-                每个英雄的故事存在在list中，两个list合并之后创建set，两个list长度的和与set长度的差值就是重合的数目。
+                每个英雄的故事存在在list中，两个list合并之后创建set，两个list长度的和与set长度的差值就是重合的数目
+                为了保证数据不会重复，所以仅仅计算key1>key2的时候的情况。
+                为了保证数据有效，仅仅记录重合数目>0的时候的情况。
     '''
     for key, value in hero_story.items():
         for innerkey, innervalue in hero_story.items():
-            if key != innerkey:
+            # print(type(int(key)))
+            if int(key) > int(innerkey):
                 key_len = len(value)
                 innerkey_len = len(innervalue)
                 # print(value)
@@ -125,7 +128,8 @@ def create_edges(edges_filepath,story_col):
                 print(str(key) + " and " + str(innerkey) + " " + str(common_len))
                 with open(edge_filepath, 'a+', encoding='utf-8') as f:
                     f_csv = csv.writer(f)
-                    f_csv.writerow([key, innerkey, common_len])
+                    if common_len > 0:
+                        f_csv.writerow([key, innerkey, common_len])
     print("edges生成完毕")
 
 
@@ -147,7 +151,7 @@ def main():
 
     # 下载对应英雄的故事，
     story_col = connect_mongodb(col_name=CollectionName.STORIES.value)
-    download_some_stories(m, story_col)
+    # download_some_stories(m, story_col)
 
     # 生成边数据
     create_edges(edge_filepath,story_col)
